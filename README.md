@@ -1,4 +1,4 @@
-# New TypeScript App
+# TypeScript App Starter
 
 Command for quick start a new TypeScript project on backend.
 
