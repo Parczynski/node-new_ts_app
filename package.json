@@ -17,6 +17,9 @@
     "url": "https://github.com/Parczynski/node-new_ts_app/issues"
   },
   "homepage": "https://github.com/Parczynski/node-db_utils_pg#readme",
+  "scripts": {
+    "start": "node ./index.js"
+  },
   "bin": {
     "new-ts-app": "./index.js"
   }
