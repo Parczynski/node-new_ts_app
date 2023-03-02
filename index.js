@@ -36,6 +36,16 @@ const { ask, stopReadline } = require('./utils');
 
 		// Write project info
 		await writeFile( path.join( target, 'package.json' ), JSON.stringify( package, null, 2 ) )
+
+		console.log( 'The project is initialized.' )
+		console.log( 'Next steps:' )
+		console.log( `\tcd ${package.name}` )
+		console.log( `\tnpm i` )
+		console.log( `\tnpm run dev`)
+
+		const currentPackage = require( './package.json' )
+		console.log( '' )
+		console.log( `More info at ${currentPackage.homepage}`)
 		
 	} catch( err ) {
 		console.error( err )
