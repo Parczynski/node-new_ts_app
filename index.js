@@ -15,7 +15,7 @@ const { ask, stopReadline } = require('./utils');
 
 	try{
 
-		const source = path.resolve( process.cwd(), 'template' );
+		const source = path.resolve( __dirname, 'template' );
 		const package = require( path.join( source, 'package.json' ) )
 
 		package.name = typeof process.argv[2] === 'undefined'
