@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Parczynski/node-new_ts_app/issues"
   },
-  "homepage": "https://github.com/Parczynski/node-db_utils_pg#readme",
+  "homepage": "https://github.com/Parczynski/node-new_ts_app#readme",
   "scripts": {
     "start": "node ./index.js"
   },
