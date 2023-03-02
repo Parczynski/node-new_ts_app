@@ -1,0 +1,23 @@
+{
+  "name": "new-ts-app",
+  "version": "1.0.0",
+  "description": "A boilerplate for a backend TypeScript project.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parczynski/node-new_ts_app.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "boilerplate",
+    "starter"
+  ],
+  "author": "Igor Parchinski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Parczynski/node-new_ts_app/issues"
+  },
+  "homepage": "https://github.com/Parczynski/node-db_utils_pg#readme",
+  "bin": {
+    "new-ts-app": "./index.js"
+  }
+}
