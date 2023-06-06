@@ -1,4 +1,3 @@
+export const dummyFunc = () => "App is started"
 
-export const dummyFunc = () => 'App is started'
-
-console.log( dummyFunc() )
+console.log(dummyFunc())
