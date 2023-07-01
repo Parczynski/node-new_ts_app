@@ -19,3 +19,5 @@ USER nodeuser
 EXPOSE 3000
 
 CMD ["npm", "start" ]
+
+## TODO: make multi-stage build to get rid of dev deps and build tools
