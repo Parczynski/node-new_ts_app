@@ -1,21 +1,41 @@
-FROM node:20-alpine
+FROM        node:20-alpine AS deps
 
-WORKDIR /app
+WORKDIR     /app
 
-COPY package.json package-lock.json ./
+COPY        package.json package-lock.json ./
 
-RUN npm i
+RUN         npm ci
 
-COPY . .
 
-RUN npm run build
 
-RUN chown -R node:node /app
+FROM        node:20-alpine AS builder
 
-USER node
+WORKDIR     /app
 
-EXPOSE 3000
+COPY        --from=deps /app/node_modules ./node_modules
 
-CMD ["npm", "start" ]
+COPY        . .
+
+RUN         npm run build
+
+
+
+FROM        node:20-alpine as runner
+
+WORKDIR     /app
+
+COPY        --from=builder /app/build ./build
+
+COPY        package.json package-lock.json ./
+
+RUN         npm i --omit=dev
+
+RUN         chown -R node:node /app
+
+USER        node
+
+EXPOSE      3000
+
+CMD         ["npm", "start" ]
 
 ## TODO: make multi-stage build to get rid of dev deps and build tools
